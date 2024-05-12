@@ -1,0 +1,188 @@
+html {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    min-height: 100vh;
+    color: #d8e9ef;
+    background-image: linear-gradient(-20deg, #0b5656 0%, #032525 100%);
+    background-size: cover;
+}
+
+@keyframes bgColor {
+    0% { background-image: linear-gradient(-20deg, #0b5656 0%, #032525 100%) }
+    10% { background-image: linear-gradient(-20deg, #005d58 0%, #032525 100%) }
+    20% { background-image: linear-gradient(-20deg, #006459 0%, #032525 100%) }
+    30% { background-image: linear-gradient(-20deg, #006c57 0%, #032525 100%) }
+    40% { background-image: linear-gradient(-20deg, #007254 0%, #032525 100%) }
+    50% { background-image: linear-gradient(-20deg, #00794e 0%, #032525 100%) }
+    60% { background-image: linear-gradient(-20deg, #008047 0%, #032525 100%) }
+    70% { background-image: linear-gradient(-20deg, #00863e 0%, #032525 100%) }
+    80% { background-image: linear-gradient(-20deg, #1d8c33 0%, #032525 100%) }
+    90% { background-image: linear-gradient(-20deg, #359125 0%, #032525 100%) }
+    100% { background-image: linear-gradient(-20deg, #4a9610 0%, #032525 100%) }
+}
+
+@keyframes revbgColor {
+    0% { background-image: linear-gradient(-20deg, #4a9610 0%, #032525 100%) }
+    10% { background-image: linear-gradient(-20deg, #359125 0%, #032525 100%) }
+    20% { background-image: linear-gradient(-20deg, #1d8c33 0%, #032525 100%) }
+    30% { background-image: linear-gradient(-20deg, #00863e 0%, #032525 100%) }
+    40% { background-image: linear-gradient(-20deg, #008047 0%, #032525 100%) }
+    50% { background-image: linear-gradient(-20deg, #00794e 0%, #032525 100%) }
+    60% { background-image: linear-gradient(-20deg, #007254 0%, #032525 100%) }
+    70% { background-image: linear-gradient(-20deg, #006c57 0%, #032525 100%) }
+    80% { background-image: linear-gradient(-20deg, #006459 0%, #032525 100%) }
+    90% { background-image: linear-gradient(-20deg, #005d58 0%, #032525 100%) }
+    100% { background-image: linear-gradient(-20deg, #0b5656 0%, #032525 100%) }
+}
+
+h1 {
+    font-size: 40px;
+    margin: 0 auto 10px auto;
+    color: #bad8e2;
+}
+
+@keyframes move{
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+
+@keyframes moveBack{
+    0% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes size{
+    0% { font-size: 40px; }
+    100% { font-size: 50px; }
+}
+
+@keyframes sizeBack{
+    0% { font-size: 50px; }
+    100% { font-size: 40px; }
+}
+
+p {
+    margin: 0;
+}
+
+.app-message {
+    height: 20px;
+    margin: 10px auto 20px auto;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.app-options {
+    opacity: 0;
+}
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.app-container {
+    width: 250px;
+    height: 420px;
+    margin: 40px auto;
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.app-circle {
+    position: relative;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+}
+
+.disabled {
+    pointer-events: none;
+}
+
+.semi-circle {
+    position: absolute;
+    width: 100px;
+    height: 200px;
+    box-sizing: border-box;
+    border: solid 6px;
+  }
+
+.left-side {
+    top: 0;
+    left: 0;
+    transform-origin: right center;
+    transform: rotate(0 deg);
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-right: none;
+    z-index: 1;
+}
+
+.right-side {
+    top: 0;
+    left: 100px;
+    transform-origin: left center;
+    transform: rotate(0 deg);
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-left: none;
+}
+
+.circle {
+    border-color: #bf5239;
+}
+
+.circle-mask {
+    border-color: #e85a71;
+}
+
+.app-counter-box {
+    font-family: 'Droid Sans Mono', monospace;
+    font-size: 250%;
+    position: relative;
+    top: 50px;
+    color: #d8e9ef;
+}
+
+@keyframes sizeCounter{
+    0% { font-size: 250%; }
+    100% { font-size: 325%; }
+}
+
+@keyframes sizeBackCounter{
+    0% { font-size: 325%; }
+    100% { font-size: 250%; }
+}
+
+@keyframes moveCounter{
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(100px); }
+}
+
+@keyframes moveCounter{
+    0% { transform: translateY(100px); }
+    100% { transform: translateY(0px); }
+}
+
+button {
+    position: relative;
+    top: 50px;
+    font-size: 80%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    background: none;
+    outline: none;
+    color: #d8e9ef;
+}
+
+button:hover {
+    color: #90c0d1;
+}
