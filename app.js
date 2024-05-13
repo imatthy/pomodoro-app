@@ -8,12 +8,17 @@ const options = document.querySelector('.app-options');
 const resetBtn = document.querySelector('.btn-reset');
 const stopBtn = document.querySelector('.btn-stop');
 const resumeBtn = document.querySelector('.btn-resume');
+const themes = document.querySelector('.themes');
+const bgOptions = document.querySelectorAll('.bgOptions');
 
 
 let myInterval;
 let state = true;
 options.disabled = true;
 resumeBtn.disabled = true;
+bgOptions.forEach(option => {
+    option.disabled = true;
+});
 
 const appTimer = (totalSeconds) => {
 
@@ -56,7 +61,6 @@ const appTimer = (totalSeconds) => {
         }
 
         resetBtn.addEventListener('click', () => {
-            document.querySelector('html').style.animation='revbgColor 0.5s forwards';
             clearInterval(myInterval);
             message.style.animation='fadeIn 1s forwards';
             startBtn.style.animation='fadeIn 1s forwards';
@@ -82,7 +86,6 @@ const appTimer = (totalSeconds) => {
 }
 
 startBtn.addEventListener('click', () => {
-    document.querySelector('html').style.animation='bgColor 0.5s forwards';
     let sessionAmount = Number.parseInt(session.textContent);
     let totalSeconds = sessionAmount * 60;
     appTimer(totalSeconds);
@@ -105,4 +108,22 @@ resumeBtn.addEventListener('click', () => {
     appTimer(totalSeconds);
 });
 
+themes.addEventListener('click', () => {
+    themes.style.animation='fadeOut 1s forwards';
+    bgOptions.forEach(option => {
+        option.style.animation='fadeIn 1s forwards';
+        option.disabled = false;
+    });
+ });
 
+bgOptions.forEach(option => {
+    option.addEventListener('click', () => {
+        const imagePath = option.querySelector('img').src;
+        document.querySelector('html').style.backgroundImage = `url(${imagePath})`;
+        themes.style.animation='fadeIn 1s forwards';
+        bgOptions.forEach(option => {
+            option.style.animation='fadeOut 1s forwards';
+            option.disabled = true;
+        });
+    });
+});

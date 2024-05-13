@@ -4,36 +4,9 @@ html {
     letter-spacing: 0.8px;
     min-height: 100vh;
     color: #d8e9ef;
-    background-image: linear-gradient(-20deg, #0b5656 0%, #032525 100%);
+    background-image: url(./images/bg1.jpg);
     background-size: cover;
-}
-
-@keyframes bgColor {
-    0% { background-image: linear-gradient(-20deg, #0b5656 0%, #032525 100%) }
-    10% { background-image: linear-gradient(-20deg, #005d58 0%, #032525 100%) }
-    20% { background-image: linear-gradient(-20deg, #006459 0%, #032525 100%) }
-    30% { background-image: linear-gradient(-20deg, #006c57 0%, #032525 100%) }
-    40% { background-image: linear-gradient(-20deg, #007254 0%, #032525 100%) }
-    50% { background-image: linear-gradient(-20deg, #00794e 0%, #032525 100%) }
-    60% { background-image: linear-gradient(-20deg, #008047 0%, #032525 100%) }
-    70% { background-image: linear-gradient(-20deg, #00863e 0%, #032525 100%) }
-    80% { background-image: linear-gradient(-20deg, #1d8c33 0%, #032525 100%) }
-    90% { background-image: linear-gradient(-20deg, #359125 0%, #032525 100%) }
-    100% { background-image: linear-gradient(-20deg, #4a9610 0%, #032525 100%) }
-}
-
-@keyframes revbgColor {
-    0% { background-image: linear-gradient(-20deg, #4a9610 0%, #032525 100%) }
-    10% { background-image: linear-gradient(-20deg, #359125 0%, #032525 100%) }
-    20% { background-image: linear-gradient(-20deg, #1d8c33 0%, #032525 100%) }
-    30% { background-image: linear-gradient(-20deg, #00863e 0%, #032525 100%) }
-    40% { background-image: linear-gradient(-20deg, #008047 0%, #032525 100%) }
-    50% { background-image: linear-gradient(-20deg, #00794e 0%, #032525 100%) }
-    60% { background-image: linear-gradient(-20deg, #007254 0%, #032525 100%) }
-    70% { background-image: linear-gradient(-20deg, #006c57 0%, #032525 100%) }
-    80% { background-image: linear-gradient(-20deg, #006459 0%, #032525 100%) }
-    90% { background-image: linear-gradient(-20deg, #005d58 0%, #032525 100%) }
-    100% { background-image: linear-gradient(-20deg, #0b5656 0%, #032525 100%) }
+    transition: background-image 1s ease-in-out;
 }
 
 h1 {
@@ -80,6 +53,22 @@ p {
     opacity: 0;
 }
 
+.bg-options {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    padding: 10px;
+}
+
+.bgOptions {
+    opacity: 0;
+}
+
+img{
+    width: 50px; 
+    height: 50px; 
+    margin-right: 5px;
+}
 
 @keyframes fadeIn {
     0% { opacity: 0; }
